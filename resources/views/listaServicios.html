@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="src/logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestone</title>
+    <link rel="stylesheet" href="css/principal.css">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="perfilusr.html"><img src="src/logo.png" width="60px" height="60px" alt=""></a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="Cotizacion.html"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i> Cotización</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaCliente.html"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Lista de clientes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaEmpleados.html"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Empleados</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="listaServicios.html"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaOrd.html"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i> Reporte </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="OrdenServ.html"><i class="fa-solid fa-file-invoice-dollar" style="color: #ffffff;"></i>  Nota</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaPaquetes.html"><i class="fa-solid fa-cubes" style="color: #ffffff;"></i> Lista paquetes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaUsuarios.html"><i class="fa-solid fa-users" style="color: #ffffff;"></i> Lista Usuarios</a>
+                  </li>
+ 
+ 
+                </ul>
+                <form class="d-flex" role="search">
+                    <a href="index.html"><button type="button" class="btn btn-danger">Cerrar sesion</button></a>
+                  </form>
+              </div>
+            </div>
+          </nav>
+
+    <!--Contenido lista de profesores-->
+    <div class="clearfix"></div>
+    
+        <div class="container p-3 my-5 bg-dark text-light " style="border-radius: 10px;" >
+            <div class="d-flex justify-content-between">
+                <h2>Servicios <a href=""><i class="fa-regular fa-paste" style="color: #ff0000;"></i></a></h2>
+                <h2>Agregar <a href="Form_Serv.html"><i class="fa-solid fa-plus"></i></a></h2>
+            </div>
+            <div class="table-responsive ">
+                <table class="table text-light ">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Costo</th>
+                            <th colspan="2">Operaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-light">
+                        <tr>
+                            <td>AB122</td>
+                            <td>Balanceo x llanta auto</td>
+                            <td>Balanceo de llanta</td>
+                            <td>$30</td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>AB123</td>
+                            <td>Alineacion eje delantero</td>
+                            <td>Alineacionde llantas delanteras</td>
+                            <td>$180</td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>AB126</td>
+                            <td>Alineacion y balanceo auto rin>16 </td>
+                            <td>Alineacion y balanceo de llantas de tipo rin>16</td>
+                            <td>$250</td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>AB124</td>
+                            <td>Cambio de aceite+filtro</td>
+                            <td>Limpieza y llenado del aceite de motor y ademas el cambio del filtro de aceite</td>
+                            <td>$600</td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>AB125</td>
+                            <td>Rectificado de disco</td>
+                            <td>Dar buen acabado a la superficie de un disco</td>
+                            <td>$150</td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>AB126</td>
+                            <td>Montaje de llanta</td>
+                            <td>Retiro de la llanta anterior y la colocacion de nueva llanta,rin y aire, por pieza</td>
+                            <td>$25</td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>AB127</td>
+                            <td>Balanceo x llanta camioneta rin>17</td>
+                            <td>Balanceo por llanta de tipo rin 17</td>
+                            <td>$50</td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>AB128</td>
+                            <td>Cambio de anticongelante rosa</td>
+                            <td>Limpieza y llenado del compartimiento del anticongelante(rosa)</td>
+                            <td>$450</td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>AB129</td>
+                            <td>Cambio de anticongelante verde</td>
+                            <td>Limpieza y llenado del compartimiento del anticongelante(rosa)</td>
+                            <td>$250</td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+    <div class="clearfix"></div>
+    
+    <footer class="tabla">
+        <table>
+            <tr>
+                <td><header class="footer">
+                  
+                    Taller de reparaciones Firestone <br>
+                    Sucursal Cascabel 4a avenida, Esquina calle Cascabel
+                    Col.Benito juarez, cp57000 Cdad.Nezahualcoyotl.Mex <i class="fa-solid fa-location-dot fa-fade fa-xl" style="color: #E0242A;;"></i><br>
+                    Teléfono +52 55 1108 3925 <i class="fa-solid fa-phone fa-fade fa-lg" style="color: #E0242A;"></i>
+                </td>
+                <td>
+                    <header class="footer">
+                  &#169; Overclock </div>
+                    <i class="fa-solid fa-code fa-fade fa-xl" style="color: #E0242A;"></i>
+                    </header>
+                </td>
+            </tr>
+        </table>
+    </footer>
+    <script src="https://kit.fontawesome.com/6e1eb60fa0.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   
+</body>
+</html>

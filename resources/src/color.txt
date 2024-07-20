@@ -1,0 +1,4 @@
+color
+rojo:#E0242A
+blanco:#FFFFFF
+azul:#00182E

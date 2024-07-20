@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/logo.png" type="image/x-icon">
+
+    <title>FirService</title>
+    <link rel="stylesheet" href="css/principal.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="perfilusr.html"><img src="src/logo.png" width="60px" height="60px" alt=""></a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="Cotizacion.html"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i> Cotización</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaCliente.html"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Lista de clientes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaEmpleados.html"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Empleados</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="listaServicios.html"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaOrd.html"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i> Reporte </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="OrdenServ.html"><i class="fa-solid fa-file-invoice-dollar" style="color: #ffffff;"></i>  Nota</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaPaquetes.html"><i class="fa-solid fa-cubes" style="color: #ffffff;"></i> Lista paquetes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ListaUsuarios.html"><i class="fa-solid fa-users" style="color: #ffffff;"></i> Lista Usuarios</a>
+                  </li>
+                  
+ 
+                </ul>
+                <form class="d-flex" role="search">
+                    <a href="index.html"><button type="button" class="btn btn-danger">Cerrar sesion</button></a>
+                  </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+<!-- Contenido lista de paquetes -->
+<div class="container p-3 my-5 bg-dark text-light " style="border-radius: 10px;" >
+    <div class="d-flex justify-content-between">
+        <h2>Paquetes <i class="fa-regular fa-paste" style="color: #ff0000;"></i></h2>
+        <h2>Agregar <a href="FormPaquetes.html"><i class="fa-solid fa-plus"></i></a></h2>
+    </div>
+    <div class="table-responsive ">
+        <table class="table text-light ">
+            <thead class="">
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Descuento</th>
+                    <th>Operaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Paquete basico</td>
+                    <td>Este paquete básico de mantenimiento automotriz incluye una alineación de eje delantero para garantizar una conducción suave y segura.</td>
+                    <td>$369</td>
+                    <td>NaN</td>
+                    <td>
+                        <a href="#" class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Paquete basico + cambio de aceite</td>
+                    <td>Este paquete de mantenimiento automotriz, ahora con cambio de aceite.</td>
+                    <td>$899</td>
+                    <td>NaN</td>
+                    <td>
+                        <a href="#" class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Paquete basico + anticongelante</td>
+                    <td>Este paquete de mantenimiento automotriz ahora incluye también el cambio del anticongelante verde.</td>
+                    <td>$599</td>
+                    <td>NaN</td>
+                    <td>
+                        <a href="#" class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Paquete viajero</td>
+                    <td>En este paquete Viajero asegura tu tranquilidad en tus viajes. Incluye alineación de eje delantero, balanceo y nitrógeno.</td>
+                    <td>$599</td>
+                    <td>NaN</td>
+                    <td>
+                        <a href="#" class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Paquete montaje</td>
+                    <td>Incluye alineación de eje delantero y balanceo de las cuatro llantas para un rendimiento óptimo.</td>
+                    <td>$369</td>
+                    <td>NaN</td>
+                    <td>
+                        <a href="#" class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Paquete montaje 2</td>
+                    <td>Incluye alineación del eje delantero, balanceo de las cuatro llantas, nitrógeno para mantener la presión adecuada.</td>
+                    <td>$469</td>
+                    <td>NaN</td>
+                    <td>
+                        <a href="#" class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash fa-sm"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<footer>
+    <table>
+        <tr>
+            <td>
+              
+                Taller de reparaciones Firestone <br>
+                Sucursal Cascabel 4a avenida, Esquina calle Cascabel
+                Col.Benito juarez, cp57000 Cdad.Nezahualcoyotl.Mex <br>
+                Teléfono +52 55 1108 3925
+            </td>
+            <td>
+              &#169; Overclock </div>
+            </td>
+        </tr>
+    </table>
+</footer>
+
+<script src="https://kit.fontawesome.com/6e1eb60fa0.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
