@@ -106,52 +106,21 @@
                 </article>
                 <button type="button" class="btn btn-outline-light">Detalles</button>
         </aside>
+        @foreach ($servicios as $item)
         <aside class="tarjeta">
-                <img src="src/servicios/Relleno de niveles.jpg" alt="paquetebasico">
-                <article>
-                    <p>Carga de nitrogeno 4 llantas  </p>
-                    <p>-Precio $150.0-</p>
-                </article>
-                <button type="button" class="btn btn-outline-light">Detalles</button>
-        </aside>
+                <img src="{{asset($item->img_ser)}}" alt="{{$item->id_servicio}}" class="img-fluid" width="60px">
+           <article>
+                <p>{{$item->nombre_serv}}  </p> 
+                <p>-Precio ${{$item->costo}}-</p>
+            </article>
+            <button type="button" class="btn btn-outline-light">Detalles</button>
+          </aside>
+        @endforeach
+        
     </section>
    
     <div class="clearfix"></div>
 
-    <section class="paq">
-        <!--columna 1-->
-        <aside class="tarjeta">
-                <img src="src/servicios/OIG3-removebg-preview.jpg" alt="paquetebasico">
-                <article>
-                    <p>Relleno de niveles hasta 1/2 lt</p>
-                    <p>-Precio $100.0-</p>
-                </article>
-                <button type="button" class="btn btn-outline-light">Detalles</button>
-        </aside>
-        <aside class="tarjeta">
-                <img src="src/servicios/valvulas.jpg" alt="paquetemontaje">
-                <article>
-                    <p>Valvulas</p>
-                    <p>-Precio $15.0-</p>
-                </article>
-                <button type="button" class="btn btn-outline-light">Detalles</button>
-        </aside>
-        <aside class="tarjeta">
-                <img src="src/servicios/Tapones nt.jpg" alt="paquetebasico">
-                <article>
-                    <p>Tapones verdes de  nitrogeno</p>
-                    <p>-Precio $20.0-</p>
-                </article>
-                <button type="button" class="btn btn-outline-light">Detalles</button>
-        </aside>
-        <aside class="tarjeta">
-                <img src="src/servicios/calibraciones.jpg" alt="paquetebasico">
-                <article>
-                    <p>Calibracion de llantas de aire</p>
-                    <p>-Gratis-</p>
-                </article>
-                <button type="button" class="btn btn-outline-light">Detalles</button>
-        </aside>
-    </section>
+    
     
 @stop

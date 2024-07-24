@@ -38,7 +38,7 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <a href="Iniciarsesion.html"><button type="button" class="btn btn-danger">Iniciar sesión</button></a>
+                        <a href="{{ route('iniciarsesion')}}"><button type="button" class="btn btn-danger">Iniciar sesión</button></a>
                     </form>
                 </div>
             </div>

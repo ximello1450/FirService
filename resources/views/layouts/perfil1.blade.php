@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firestone</title>
-    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="{{ asset('css/principal.css') }}">
+    <link rel="stylesheet" href="{{asset('css/estilos.formcol.css')}}">
+
+    <link rel="shortcut icon" href="{{ asset('imagenes friservice/logo.png') }}" type="image/x-icon">
+
   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6e1eb60fa0.js" crossorigin="anonymous"></script>
@@ -19,7 +23,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="perfilusr.html"><img src="src/logo.png" width="60px" height="60px" alt=""></a>
+                <a class="navbar-brand" ><img src="{{asset('src/logo.png')}}" width="60px" height="60px" alt=""></a>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
                   <li class="nav-item">
                     <a class="nav-link " aria-current="page" href="Cotizacion.html"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i> Cotización</a>
@@ -31,7 +35,7 @@
                     <a class="nav-link" href="ListaEmpleados.html"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Empleados</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="listaServicios.html"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Servicios</a>
+                    <a class="nav-link"  href="{{ route('listaServicios') }}"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Servicios</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="ListaOrd.html"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i>  Reporte </a>
@@ -48,42 +52,13 @@
  
                 </ul>
                 <form class="d-flex" role="search">
-                  <a href="index.html"><button type="button" class="btn btn-danger">Cerrar sesion</button></a>
+                  <a  href="{{ route('inicio') }}"><button type="button" class="btn btn-danger">Cerrar sesion</button></a>
                 </form>
               </div>
             </div>
           </nav>
 </div><br>
-          <div class="container md-5">
-            <!-- Contenido de la página -->
-             <div class="card">
-                <div class="card-header">
-                    <h4>¡Bienvenido de nuevo!</h4>
-                </div>
-                <div class="row "  >
-                    <div class="col"  >
-                        
-                            <div class="card-body text-center">
-                            <img src="src/firestone_logo.jpg" class="card-img-top" alt="..." style="width: 40%;">
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title ">¡Hola gerente!</h5>
-                                <p class="card-text ">En tu perfil puedes disfrutar de diversos apartados donde puedes modificar y administrar distintos apartados de la sucursal</p>
-                                <a href="Cotizacion.html" class="btn btn-danger m-2">&nbsp;&nbsp;&nbsp;Cotizar&nbsp;&nbsp;&nbsp;</a>
-                                <a href="ListaOrd.html" class="btn btn-dark">Generar reporte</a>
-                            </div>
-            
-                    </div>
-                    <div class="col p-5 text-center"  >
-                            <div class="card text-center ">
-                                <img src="src/logo.png"  alt="..." style="width: 30%;margin: auto;">
-                            <p class="card-text" >  
-                                <h4 ><b>Gerente</b> Rafael Rojas</h4></p>
-                            </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
+@yield('contenido')
     <!--Pie de pegina-->
     <footer class="tabla">
         <table>
