@@ -17,8 +17,8 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title ">¡Hola gerente!</h5>
                                 <p class="card-text ">En tu perfil puedes disfrutar de diversos apartados donde puedes modificar y administrar distintos apartados de la sucursal</p>
-                                <a href="Cotizacion.html" class="btn btn-danger m-2">&nbsp;&nbsp;&nbsp;Cotizar&nbsp;&nbsp;&nbsp;</a>
-                                <a href="ListaOrd.html" class="btn btn-dark">Generar reporte</a>
+                                <a href="{{route('cotizacion')}}" class="btn btn-danger m-2">&nbsp;&nbsp;&nbsp;Cotizar&nbsp;&nbsp;&nbsp;</a>
+                                <a href="{{route('reporte')}}" class="btn btn-dark">Generar reporte</a>
                             </div>
             
                     </div>

@@ -1,4 +1,4 @@
-<p align="center"><a href="https://firservice.000webhostapp.com/index.html" target="_blank"><img src="https://i.pinimg.com/originals/19/3c/62/193c622f62e6e72eb745d74b559c55c4.jpg" width="200" alt="FirService Logo"></a></p>
+<p align="center"><a href="https://firservice.000webhostapp.com/index.html" target="_blank"><img src="src/logo.png" width="200" alt="FirService Logo"></a></p>
 
 
 ## FirService

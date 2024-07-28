@@ -19,6 +19,16 @@ class ServicioControlador extends Controller
     //agregar un servicio y guarda una imagen del servicio en el poryecto
     public function agregarServicio(Request $request)
     {
+        //validar datos
+        $request->validate([
+            'nombre_serv' => 'required|string|max:255',
+            'descripcion' => 'required|string',
+            'costo' => 'required|numeric|min:0',
+            'descuento' => 'nullable|numeric|min:0|max:100',
+            'estatus' => 'required', 
+            'img_ser'=>'required'
+        ]);
+        
         $servicios=new Servicio();
 //Este cacho de codigo comprueba si en el campo de imagen hay un archivo o imagen, despues
 //almacena la imagen en file y la mueve a la carpteda src que esta en public y guarda en la base de datos la direccion de la imagen
@@ -102,5 +112,10 @@ class ServicioControlador extends Controller
      $servicios->delete();
      return redirect()->route('listaServicios');
 
+    }
+    public function confirmar($id)
+    {
+        $servicios=Servicio::find($id);
+        return view('almacen/gerente/CRUDservicio/eliminarServicio',compact('servicios'));
     }
 }

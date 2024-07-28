@@ -30,40 +30,23 @@
                                 <img src="{{asset($item->img_ser)}}" alt="{{$item->id_servicio}}" class="img-fluid" width="60px">
                             </td>
                             <td>${{$item->costo}}</td>
-                            @if (($item->descuento)!=0)
-                                <td>%{{$item->descuento}}</td>
+                            @if (($item->descuento)!=null)
+                                <td>%{{$item->descuento}}</td>    
+                                @else     
+                                <td>Sin descuento</td>
                             @endif
                             <td>
+                                
                                 <form action="{{route('editarServicio',$item->id_servicio)}}" method="GET">
                                     <button class="btn btn-light"><i class="fa-solid fa-edit fa-sm"></i></button>
                                 </form>
                                
                             </td>
                             <td>
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash fa-sm"></i></button>
-
-                            {{-- VENTANA FLOTANTE PARA LA CONFRIMACION DE LA ELIMINACION DEL SERVICIO --}}
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" style="color: gray" id="exampleModalLabel">Eliminar el servicio</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>  
-                                    <div class="modal-body" style="color: gray">
-                                        Quieres el servicio {{$item->nombre_serv}}?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <form action="{{route('eliminarServicio',$item->id_servicio)}}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                        <button type="submit" class="btn btn-primary">Confirmar</button>
-                                        </form>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
+                            <form action="{{route('confirmar',$item->id_servicio)}}" method="GET">
+                                
+                                <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash fa-sm"></i></button>
+                            </form>
                                 
                             </td>
                             

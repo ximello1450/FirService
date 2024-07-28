@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="src/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('src/logo.png')}}" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firestone</title>
     <link rel="stylesheet" href="{{ asset('css/principal.css') }}">
     <link rel="stylesheet" href="{{asset('css/estilos.formcol.css')}}">
-
+    <link rel="stylesheet" href="{{asset('css/estilos_lista.css')}}">
     <link rel="shortcut icon" href="{{ asset('imagenes friservice/logo.png') }}" type="image/x-icon">
 
   
@@ -23,10 +23,10 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" ><img src="{{asset('src/logo.png')}}" width="60px" height="60px" alt=""></a>
+                <a class="navbar-brand" href="{{route('admin.menu')}}" ><img src="{{asset('src/logo.png')}}" width="60px" height="60px" alt=""></a>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
                   <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="Cotizacion.html"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i> Cotización</a>
+                    <a class="nav-link " aria-current="page" href="{{route('cotizacion')}}"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i> Cotización</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="ListaCliente.html"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Lista de clientes</a>
@@ -38,10 +38,10 @@
                     <a class="nav-link"  href="{{ route('listaServicios') }}"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Servicios</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="ListaOrd.html"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i>  Reporte </a>
+                    <a class="nav-link" href="{{route('reporte')}}"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i>  Reporte </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="OrdenServ.html"><i class="fa-solid fa-file-invoice-dollar" style="color: #ffffff;"></i>  Nota</a>
+                    <a class="nav-link" href="{{route('orden')}}"><i class="fa-solid fa-file-invoice-dollar" style="color: #ffffff;"></i>  Nota</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="ListaPaquetes.html"><i class="fa-solid fa-cubes" style="color: #ffffff;"></i> Lista paquetes</a>
