@@ -34,7 +34,7 @@
                             <a class="nav-link" href="{{ route('servicios') }}"><i class="fa-solid fa-code fa-car" style="color: #ffffff;"></i> Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('paquetes') }}"><i class="fa-solid fa-cubes" style="color: #ffffff;"></i> Paquetes</a>
+                            <a class="nav-link" href="{{ route('paquetes_inicio') }}"><i class="fa-solid fa-cubes" style="color: #ffffff;"></i> Paquetes</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">

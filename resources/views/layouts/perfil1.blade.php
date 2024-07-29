@@ -44,7 +44,7 @@
                     <a class="nav-link" href="{{route('orden')}}"><i class="fa-solid fa-file-invoice-dollar" style="color: #ffffff;"></i>  Nota</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="ListaPaquetes.html"><i class="fa-solid fa-cubes" style="color: #ffffff;"></i> Lista paquetes</a>
+                    <a class="nav-link" href="{{route('CRUDpaquete.index')}}"><i class="fa-solid fa-cubes" style="color: #ffffff;"></i> Lista paquetes</a>
                   </li>
                   
  

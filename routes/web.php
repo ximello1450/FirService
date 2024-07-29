@@ -1,6 +1,6 @@
 <?php
 //importar el controlador del objeto Servicio
-
+use App\Http\Controllers\PaqueteController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ServicioControlador;
 use Illuminate\Support\Facades\Route;
@@ -10,11 +10,11 @@ use App\Http\Controllers\ClienteControlador;
 Route::get('/', function () {
     return view('almacen/inicio/welcome');
 })->name('inicio');
-Route::get('/servicios',[ServicioControlador::class,'listaServiciosInicio'])->name('servicios');
+Route::get('/servicios-index',[ServicioControlador::class,'listaServiciosInicio'])->name('servicios');
 
-Route::get('/paquetes', function () {
+Route::get('/paquetes-index', function () {
     return view('almacen/inicio/paquetes');
-})->name('paquetes');
+})->name('paquetes_inicio');
 Route::get('/iniciar-sesion', function () {
     return view('iniciarsesion');
 })->name('iniciarsesion');
@@ -93,3 +93,13 @@ Route::get('/login', function () {
 })->name('login');
 Route::post('/loginchk', [LoginController::class, 'loginchk']) -> name('loginchk');
 
+//Rutas para paquetes
+Route::get('paquetes', [PaqueteController::class, 'index'])->name('CRUDpaquete.index');
+Route::get('paquetes/create', [PaqueteController::class, 'create'])->name('CRUDpaquete.form');
+Route::post('/paquete', [PaqueteController::class, 'store'])->name('CRUDpaquete.store');
+Route::put('paquete/{id}', [PaqueteController::class, 'update'])->name('CRUDpaquete.update');
+Route::get('/paquete/{id}/edit', [PaqueteController::class, 'edit'])->name('CRUDpaquete.edit');
+Route::delete('/paquete/{id}', [PaqueteController::class, 'destroy'])->name('CRUDpaquete.destroy');
+Route::get('/paquete/create', [PaqueteController::class, 'create'])->name('CRUDpaquete.create');
+//Ruta de los paquetes
+Route::get('/tarjPaquetes', [PaqueteController::class, 'mostrarPaquetes'])->name('paquetes.estatica');

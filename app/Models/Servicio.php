@@ -15,4 +15,9 @@ class Servicio extends Model
     //indispensable para que no les de error, por qie agrega columnas llamadas createdat y updateat
     public $timestamps = false;
 
+
+    public function paquetes()
+    {
+        return $this->belongsToMany(Paquete::class);
+    }
 }
