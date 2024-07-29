@@ -29,7 +29,7 @@
                     <a class="nav-link " aria-current="page" href="{{route('cotizacion')}}"><i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i> Cotización</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="ListaCliente.html"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Lista de clientes</a>
+                    <a class="nav-link" href="{{ route('listaClientes') }}"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Lista de clientes</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="ListaEmpleados.html"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Empleados</a>

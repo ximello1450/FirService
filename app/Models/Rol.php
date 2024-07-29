@@ -9,14 +9,15 @@ class Rol extends Model
 {
     use HasFactory;
 
-    protected $table = 'roles'; // Nombre de la tabla roles
+    // Nombre de la tabla
+    protected $table = 'roles';
+
+    // Clave primaria
+    protected $primaryKey = 'id_rol';
+
+    // Indicar que esta clave no es autoincremental (si aplica)
+    public $incrementing = false;
+
+    // Si tu tabla tiene timestamps
     public $timestamps = false;
-
-    protected $primaryKey = 'id_rol'; // Suponiendo que 'id_rol' es la clave primaria
-
-    // Definir relación muchos a muchos con empleados
-    public function empleados()
-    {
-        return $this->belongsToMany(Empleado::class, 'empleados_roles', 'id_rol', 'id_empleado');
-    }
 }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ServicioControlador;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\ClienteControlador;
 //Routas del inicio, sin iniciar sesion ni nada
 Route::get('/', function () {
     return view('almacen/inicio/welcome');
@@ -76,3 +77,10 @@ Route::get('/cliente/ordenCliente', function () {
     return view('almacen/cliente/ordenCliente');
 })->name('ordenCliente');
 
+//Rutas de crud Cliente
+Route::get('/gerente/listaClientes', [ClienteControlador::class, 'listaClientes'])->name('listaClientes');
+Route::get('/gerente/FormCliente', [ClienteControlador::class, 'formCliente'])->name('formCliente');
+Route::post('/gerente/altaClientes', [ClienteControlador::class, 'agregarCliente'])->name('altaCliente');
+Route::get('/gerente/editar/{id}', [ClienteControlador::class, 'editarCliente'])->name('editarCliente');
+Route::put('/gerente/actualizarCliente/{id}', [ClienteControlador::class, 'actualizarCliente'])->name('actualizarCliente');
+Route::delete('/gerente/eliminarCliente/{id}', [ClienteControlador::class, 'eliminarCliente'])->name('eliminarCliente');
