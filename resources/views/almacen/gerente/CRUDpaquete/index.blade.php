@@ -30,7 +30,7 @@
                         <td>${{ $paquete->costo }}</td>
                         <td>
                         @if($paquete->img_paq)
-                        <img src="{{ asset($paquete->img_paq) }}" alt="{{ $paquete->nombre_paq }}" class="img-fluid" width="60px">
+                        <img src="{{ asset('src/paquetes/'.$paquete->img_paq) }}" alt="{{ $paquete->nombre_paq }}" class="img-fluid" width="60px">
 
                             @else
                                 Sin imagen

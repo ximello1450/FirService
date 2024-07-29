@@ -40,13 +40,14 @@ public function index()
         
         // Crear Paquete
         $paquete = Paquete::create($validatedData);
-        if($request->hasFile('img_paq')){
-            $file= $request->file('img_paq');
-                $url=public_path('src/paquetes/');
-                $filename=time().'_';
-                $subirS=$request->file('img_paq')->move($url,$filename);
-                $paquete->img_paq=$url.$filename;
+        $imageName = '';
+        $image = $request->file('img_paq');
+        if (!is_null($image)){
+            $imageName = 'image_'.date('His').'.'.$image->getClientOriginalExtension();
+            $image->move('src/paquetes', $imageName);
         }
+        $paquete->img_paq=$imageName;
+        $paquete->save();
         //Manejo de subida de archivo
         // if ($request->hasFile('img_paq')) {
         //     $file = $request->file('img_paq');
