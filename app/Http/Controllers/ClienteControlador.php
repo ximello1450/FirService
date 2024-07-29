@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cliente;
-use App\Models\Rol; // Importa el modelo Rol para trabajar con roles
+use App\Models\Roles;
 use Illuminate\Http\Request;
 
 class ClienteControlador extends Controller
@@ -15,7 +15,7 @@ class ClienteControlador extends Controller
      */
     public function formCliente()
     {
-        $roles = Rol::all(); // Obtiene todos los roles disponibles
+        $roles = Roles::all(); // Obtiene todos los roles disponibles
         $defaultRoleId = 1; // ID del rol por defecto, ajusta según sea necesario
 
         return view('almacen/gerente/CRUDcliente/formCliente', compact('roles', 'defaultRoleId'));
@@ -37,7 +37,7 @@ class ClienteControlador extends Controller
             'fecha_alta' => 'required|date|before:tomorrow',
             'correo' => 'required|email|max:255',
             'contra' => 'required|string|min:8',
-            'id_rol' => 'required|exists:roles,id_rol', // Asegura que el rol existe en la tabla roles porsilas dudas
+            'id_rol' => 'required|exists:roles,id_rol', // Asegura que el rol existe en la tabla roles por si las dudas
         ]);
 
         // Crea un nuev cliente con los datos validados
@@ -48,7 +48,7 @@ class ClienteControlador extends Controller
         $cliente->app_materno = $request->app_materno;
         $cliente->fecha_alta = $request->fecha_alta;
         $cliente->correo = $request->correo;
-        $cliente->contra = bcrypt($request->contra); // Hashea la contraseña
+        $cliente->contra = $request->contra; // Hashea la contraseña
         $cliente->save(); // Guarda el nuevo cliente en la base de datos
 
         return redirect()->route('listaClientes')->with('success', 'Cliente agregado exitosamente.');
@@ -85,7 +85,7 @@ class ClienteControlador extends Controller
     public function editarCliente($id)
     {
         $cliente = Cliente::findOrFail($id); // Obtiene el cliente por su ID
-        $roles = Rol::all(); // Obtiene todos los roles para el formulario de edición
+        $roles = Roles::all(); // Obtiene todos los roles para el formulario de edición
 
         return view('almacen.gerente.CRUDcliente.editarCliente', compact('cliente', 'roles'));
     }

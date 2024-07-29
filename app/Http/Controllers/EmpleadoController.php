@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Empleado;
-use App\Models\Rol; //Importar el modelo ROL para que haya relación y no ocurran errores a la hora de añadir, editar y eliminar
+use App\Models\Roles;
 
 class EmpleadoController extends Controller
 {
@@ -12,7 +12,7 @@ class EmpleadoController extends Controller
     {
         // Obtener todos los empleados
         $empleados = Empleado::all();
-        $roles = Rol::all();
+        $roles = Roles::all();
 
         // Devolver la vista de lista de empleados
         return view('almacen.gerente.empleado.listaEmpleados')->with("empleados", $empleados);
@@ -21,7 +21,7 @@ class EmpleadoController extends Controller
     public function formEmpleado()
     {
         // Obtener todos los roles disponibles para el formulario
-        $roles = Rol::all();
+        $roles = Roles::all();
         
         // Devolver el formulario para crear un nuevo empleado
         return view('almacen.gerente.empleado.formEmpleado', compact('roles'));
@@ -59,7 +59,7 @@ class EmpleadoController extends Controller
         $empleado->dias_trabajo = implode(',', $request->dias_trabajo); // Convertir array a string
         $empleado->num_tel = $request->num_tel;
         $empleado->correo = $request->correo;
-        $empleado->contra = bcrypt($request->contra); // Hashear la contraseña
+        $empleado->contra = $request->contra; // Hashear la contraseña
 
         if ($empleado->save()) {
             // Asignar roles al empleado
@@ -96,7 +96,7 @@ class EmpleadoController extends Controller
         $empleado = Empleado::findOrFail($id);
         
         // Obtener todos los roles disponibles
-        $roles = Rol::all();
+        $roles = Roles::all();
         
         // Devolver la vista de edición del empleado con los roles
         return view('almacen.gerente.empleado.editarEmpleado', compact('empleado', 'roles'));

@@ -106,7 +106,7 @@
                         @foreach ($roles as $rol)
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="roles[]" value="{{ $rol->id_rol }}" id="rol{{ $rol->id_rol }}"
-                            @if ($empleado->getRoles()->contains('id_rol', $rol->id_rol))
+                            @if ($empleado->roles->contains('id_rol', $rol->id_rol))
                                 checked
                             @endif>
                             <label class="form-check-label" for="rol{{ $rol->id_rol }}">{{ $rol->nombre }}</label>

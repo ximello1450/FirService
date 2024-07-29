@@ -30,16 +30,27 @@
                         <b>Iniciar Sesión</b>
                     </div>
                     <div class="card-body">
-                        <form action="iniciarsesioncomo.html">
+                        <form action="{{ route('loginchk') }}" method="POST">
+                        @csrf
+
                             <div class="form-group">
-                                <label for="correo">Usuario</label>
-                                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required>
+                                <label for="correo">Correo</label>
+                                <input type="text" class="form-control" id="correo" name="correo" placeholder="Correo" value="{{ old('email') }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="contra">Contraseña</label>
                                 <input type="password" class="form-control" id="contra" name="contra" placeholder="Contraseña" required>
                             </div>
                             <button type="submit" class="btn btn-custom btn-block text-white">Iniciar Sesión</button>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                         </form>
                     </div>
                 </div>

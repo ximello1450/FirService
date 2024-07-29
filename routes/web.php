@@ -1,5 +1,7 @@
 <?php
 //importar el controlador del objeto Servicio
+
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ServicioControlador;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
@@ -84,3 +86,10 @@ Route::post('/gerente/altaClientes', [ClienteControlador::class, 'agregarCliente
 Route::get('/gerente/editar/{id}', [ClienteControlador::class, 'editarCliente'])->name('editarCliente');
 Route::put('/gerente/actualizarCliente/{id}', [ClienteControlador::class, 'actualizarCliente'])->name('actualizarCliente');
 Route::delete('/gerente/eliminarCliente/{id}', [ClienteControlador::class, 'eliminarCliente'])->name('eliminarCliente');
+
+// Rutas de incio de sesion
+Route::get('/login', function () {
+    return view('iniciarsesion');
+})->name('login');
+Route::post('/loginchk', [LoginController::class, 'loginchk']) -> name('loginchk');
+

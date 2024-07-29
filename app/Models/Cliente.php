@@ -2,12 +2,23 @@
 
 namespace App\Models;
 
+
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class Cliente extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
+
+    protected $fillable = [
+        'correo', 'contra',
+    ];
+
+    protected $hidden = [
+        'contra',
+    ];
 
     // Define el nombre de la tabla en la base de datos
     protected $table = 'clientes';
@@ -25,6 +36,6 @@ class Cliente extends Model
     public function rol()
     {
         // Establece que un cliente pertenece a un rol específico
-        return $this->belongsTo(Rol::class, 'id_rol', 'id_rol');
+        return $this->belongsTo(Roles::class, 'id_rol', 'id_rol');
     }
 }

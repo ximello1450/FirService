@@ -2,29 +2,32 @@
 
 namespace App\Models;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Empleado extends Model
+class Empleado extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     public $incrementing = true;
     protected $primaryKey = 'id_empleado';
     public $timestamps = false;
-    
-   
-    public function getRoles(){
-        return Rol::join("empleados_roles", "empleados_roles.id_rol", "=", "roles.id_rol")
-        ->select("roles.*")
-        ->where("empleados_roles.id_empleado", "=", $this->id_empleado)
-        ->get();
-    }
 
+    // Define los campos que se pueden llenar masivamente
+    protected $fillable = [
+        'correo', 'contra',
+    ];
+
+    // Oculta los campos sensibles
+    protected $hidden = [
+        'contra', // Asegúrate de ocultar la contraseña
+    ];
+
+    // Define los roles relacionados
     public function roles()
-{
-    return $this->belongsToMany(Rol::class, 'empleados_roles', 'id_empleado', 'id_rol');
-}
-    
+    {
+        return $this->belongsToMany(Roles::class, 'empleados_roles', 'id_empleado', 'id_rol');
+    }
 }

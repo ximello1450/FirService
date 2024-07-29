@@ -54,8 +54,8 @@
                         <td>{{ $empleado->num_tel }}</td>
                         <td>{{ $empleado->correo }}</td>
                         <td>
-                            @foreach ($empleado->getRoles() as $rol) 
-                              {{ $rol['nombre'] }} <br>
+                            @foreach ($empleado->roles as $rol) 
+                              {{ $rol->nombre }} <br>
                             @endforeach
                         </td>
                         <td>
