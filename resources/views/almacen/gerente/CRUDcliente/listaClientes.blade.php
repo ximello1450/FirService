@@ -39,30 +39,12 @@
                         </form>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $item->id_clientes }}"><i class="fa-solid fa-trash fa-sm"></i></button>
-
-                        {{-- VENTANA FLOTANTE PARA LA CONFIRMACION DE LA ELIMINACION DEL CLIENTE --}}
-                        <div class="modal fade" id="deleteModal{{ $item->id_clientes }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ $item->id_clientes }}" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" style="color: gray" id="deleteModalLabel{{ $item->id_clientes }}">Eliminar el cliente</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body" style="color: gray">
-                                        ¿Quieres eliminar el cliente {{ $item->nombre }}?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <form action="{{ route('eliminarCliente', $item->id_clientes) }}" method="POST">
+                         <form action="{{ route('eliminarCliente', $item->id_clientes) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-primary">Confirmar</button>
+                                            <button type="submit" class="btn btn-danger"  onclick="return confirm('¿Estás seguro de que deseas eliminar este Cliente?')"><i class="fa-solid fa-trash fa-sm"></i></button>
                                         </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                   
                     </td>
                 </tr>
                 @endforeach

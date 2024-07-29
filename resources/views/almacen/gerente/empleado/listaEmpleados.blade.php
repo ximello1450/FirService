@@ -15,11 +15,10 @@
 
     <div class="container p-3 my-5 bg-dark text-light" style="border-radius: 10px;">
         <!-- Botón para agregar nuevo empleado -->
-        <div class="mb-3 d-flex justify-content-end">
-            <a href="{{ route('formEmpleado') }}" class="btn btn-success">Agregar Nuevo Empleado</a>
+        <div class="d-flex justify-content-between">
+            <h2>Empleado <a href=""><i class="fa-regular fa-paste" style="color: #ff0000;"></i></a></h2>
+            <h2>Agregar <a href="{{ route('formEmpleado') }}"><i class="fa-solid fa-plus"></i></a></h2>
         </div>
-
-        <h4>Lista de Empleados</h4>
         <div class="table-responsive">
             <table class="table text-light">
                 <thead>

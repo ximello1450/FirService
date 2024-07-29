@@ -46,9 +46,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="ListaPaquetes.html"><i class="fa-solid fa-cubes" style="color: #ffffff;"></i> Lista paquetes</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="ListaUsuarios.html"><i class="fa-solid fa-users" style="color: #ffffff;"></i> Lista Usuarios</a>
-                  </li>
+                  
  
                 </ul>
                 <form class="d-flex" role="search">

@@ -37,11 +37,14 @@
     <div class="form-group">
     <label for="id_rol">Rol</label>
     <select name="id_rol" id="id_rol" class="form-control" required>
-        @foreach($roles as $rol)
+        {{-- @foreach($roles as $rol)
             <option value="{{ $rol->id_rol }}" {{ old('id_rol', $defaultRoleId) == $rol->id_rol ? 'selected' : '' }}>
                 {{ $rol->nombre }}
             </option>
-        @endforeach
+        @endforeach --}}
+        <option value="1" selected>
+            Cliente
+        </option>
     </select>
 </div>
 

@@ -43,22 +43,20 @@
                                
                             </td>
                             <td>
-                            <form action="{{route('confirmar',$item->id_servicio)}}" method="GET">
-                                
-                                <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-trash fa-sm"></i></button>
+                            <form action="{{route('eliminarServicio',$item->id_servicio)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger"  onclick="return confirm('¿Estás seguro de que deseas eliminar este servicio?')"><i class="fa-solid fa-trash fa-sm"></i></button>
                             </form>
-                                
-                            </td>
                             
-                        </tr>
+                        
+                            </td>
+                      </tr>
                       @endforeach
-                        
-                        
-                        
                     </tbody>
                 </table>
             </div>
         </div>
     
     <div class="clearfix"></div>
-    @stop
+    @endsection
