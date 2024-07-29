@@ -24,7 +24,7 @@
                     <div class="card text-center ">
                         <img src="src/logo.png"  alt="..." style="width: 30%;margin: auto;">
                     <p class="card-text" >  
-                        <h4 ><b>Cliente</b> Arturo Ramos</h4></p>
+                        <h4 ><b>Cliente</b></h4></p>
                     </div> 
             </div>
         </div>

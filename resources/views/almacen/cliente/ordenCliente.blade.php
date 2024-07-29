@@ -19,11 +19,9 @@
             20-05-2024
         </td>
             <td>
-                Arturo Ramos
+                Jose Luis
             </td>
-            <td>
-                   5638848078 
-            </td>
+            <td>*</td>
             <td>
                     ****
             </td>

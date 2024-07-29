@@ -25,7 +25,7 @@
                     <div class="card text-center ">
                         <img src="{{asset('src/logo.png')}}"  alt="..." style="width: 30%;margin: auto;">
                     <p class="card-text" >  
-                        <h4 ><b>Empleado</b> Jose_Lopez</h4></p>
+                        <h4 ><b>Empleado</b></p>
                     </div> 
             </div>
         </div>

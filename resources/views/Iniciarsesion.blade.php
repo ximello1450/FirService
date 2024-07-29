@@ -13,7 +13,7 @@
 <body>
     <header class="encabezado text-center py-3 bg-dark text-white">
         <div class="encabezado-container">
-            <a href="index.html"><img src="src/logo.png" alt="logo" class="img-fluid encabezado-logo"></a>
+            <a href="{{route('inicio')}}"><img src="src/logo.png" alt="logo" class="img-fluid encabezado-logo"></a>
             <h1 class="encabezado-titulo">FIRSERVICE</h1>
         </div>
     </header>

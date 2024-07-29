@@ -26,7 +26,7 @@
                             <div class="card text-center ">
                                 <img src="src/logo.png"  alt="..." style="width: 30%;margin: auto;">
                             <p class="card-text" >  
-                                <h4 ><b>Gerente</b> Rafael Rojas</h4></p>
+                                <h4 ><b>Gerente</b></p>
                             </div> 
                     </div>
                 </div>
