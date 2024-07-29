@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Servicio;
+use App\Models\PaquetesServicios;
 use Illuminate\Http\Request;
 
 class ServicioControlador extends Controller
@@ -109,6 +110,8 @@ class ServicioControlador extends Controller
      if ($servicios->img_ser && file_exists(public_path($servicios->img_ser))) {
         unlink(public_path($servicios->img_ser));
     }
+    PaquetesServicios::where('id_servicio', '=', $id)
+                 ->delete();
      $servicios->delete();
      return redirect()->route('listaServicios');
 
