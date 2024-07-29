@@ -20,7 +20,7 @@
      <section class="paq2">
         <!--columna 1-->
         <aside class="tarjeta1">
-            <img src="src/paquetes/Paquete basico+cambio de aceite.jpg" alt="servicio 1">
+            <img src="src/paquetes/Paquetebasicocambiodeaceite.jpg" alt="servicio 1">
         </aside>
          <!--columna 2-->
         <aside class="tarjeta2">
@@ -42,7 +42,7 @@
      <section class="paq2">
         <!--columna 1-->
         <aside class="tarjeta1">
-            <img src="src/paquetes/Paquete basico+anticongelante.jpg" alt="servicio 1">
+            <img src="src/paquetes/Paquetebasicoanticongelante.jpg" alt="servicio 1">
         </aside>
          <!--columna 2-->
         <aside class="tarjeta2">
