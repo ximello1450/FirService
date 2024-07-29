@@ -32,7 +32,7 @@
                     <a class="nav-link" href="{{ route('listaClientes') }}"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Lista de clientes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="ListaEmpleados.html"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Empleados</a>
+                    <a class="nav-link" href=" {{ route ('listaEmpleados') }} "><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Empleados</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link"  href="{{ route('listaServicios') }}"><i class="fa-solid fa-user-tie" style="color: #ffffff;"></i> Lista de Servicios</a>
