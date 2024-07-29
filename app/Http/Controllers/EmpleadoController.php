@@ -35,16 +35,16 @@ class EmpleadoController extends Controller
             'app_paterno' => 'required|string|max:255',
             'app_materno' => 'required|string|max:255',
             'cargo' => 'required|string|max:255',
-            'num_tel' => 'nullable|string|max:15',
-            'correo' => 'required|email|max:255',
+            'num_tel' => 'required|string|max:15',
+            'correo' => 'nullable|email|max:255',
             'horario_entrada' => 'required|date_format:H:i',
             'horario_salida' => 'required|date_format:H:i',
             'dias_trabajo' => 'required|array',
             'dias_trabajo.*' => 'string|in:Lunes,Martes,Miércoles,Jueves,Viernes,Sábado,Domingo',
             'fecha_alta' => 'required|date',
-            'roles' => 'required|array',
+            'roles' => 'nullable|array',
             'roles.*' => 'exists:roles,id_rol', // Verifica que existe en la tabla roles
-            'contra' => 'required|string|min:8',
+            'contra' => 'nullable|string|min:8',
         ]);
 
         // Guardar el empleado en la base de datos
@@ -114,14 +114,14 @@ class EmpleadoController extends Controller
             'app_paterno' => 'required|string|max:255',
             'app_materno' => 'required|string|max:255',
             'cargo' => 'required|string|max:255',
-            'num_tel' => 'nullable|string|max:15',
-            'correo' => 'required|email|max:255',
+            'num_tel' => 'required|string|max:15',
+            'correo' => 'nullable|email|max:255',
             'horario_entrada' => 'required|date_format:H:i',
             'horario_salida' => 'required|date_format:H:i',
             'dias_trabajo' => 'required|array',
             'dias_trabajo.*' => 'string|in:Lunes,Martes,Miércoles,Jueves,Viernes,Sábado,Domingo',
             'fecha_alta' => 'required|date',
-            'roles' => 'required|array',
+            'roles' => 'nullable|array',
             'roles.*' => 'exists:roles,id_rol', // Verifica que existe en la tabla roles
             'contra' => 'nullable|string|min:8', // Cambiado a nullable para permitir que el campo de contraseña sea opcional durante la actualización
         ]);

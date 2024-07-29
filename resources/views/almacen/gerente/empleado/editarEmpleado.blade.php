@@ -41,14 +41,14 @@
                 </div>
                 <div class="col-md-6">
                     <label for="num_tel" class="form-label">Número Telefónico</label>
-                    <input type="tel" class="form-control" id="num_tel" name="num_tel" value="{{ old('num_tel', $empleado->num_tel) }}">
+                    <input type="tel" class="form-control" id="num_tel" name="num_tel" value="{{ old('num_tel', $empleado->num_tel) }}" required>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-6">
                     <label for="correo" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="correo" name="correo" value="{{ old('correo', $empleado->correo) }}" required>
+                    <input type="email" class="form-control" id="correo" name="correo" value="{{ old('correo', $empleado->correo) }}">
                 </div>
                 <div class="col-md-3">
                     <label for="horario_entrada" class="form-label">Horario de Entrada</label>
