@@ -2,6 +2,7 @@
 //importar el controlador del objeto Servicio
 use App\Http\Controllers\ServicioControlador;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmpleadoController;
 //Routas del inicio, sin iniciar sesion ni nada
 Route::get('/', function () {
     return view('almacen/inicio/welcome');
@@ -50,6 +51,15 @@ Route::get('/empleado', function () {
 Route::get('/empleado/ordenes', function () {
     return view('almacen/empleado/listaOrdEmpleado');
 })->name('ordenesEmpleado');
+
+Route::get('/empleados', [EmpleadoController::class, 'index'])->name('empleados.index');
+Route::get('/gerente/listaEmpleados', [EmpleadoController::class, 'listaEmpleados'])->name('listaEmpleados');
+Route::get('/gerente/formEmpleado', [EmpleadoController::class, 'formEmpleado'])->name('formEmpleado');
+Route::post('/gerente/altaEmpleado', [EmpleadoController::class, 'agregarEmpleado'])->name('altaEmpleado');
+Route::get('/gerente/editarEmpleado/{id}', [EmpleadoController::class, 'editarEmpleado'])->name('editarEmpleado');
+Route::put('/gerente/actualizarEmpleado/{id}', [EmpleadoController::class, 'actualizarEmpleado'])->name('actualizarEmpleado');
+Route::delete('/gerente/eliminarEmpleado/{id}', [EmpleadoController::class, 'eliminarEmpleado'])->name('eliminarEmpleado');
+
 
 
 //*Ruta del inicio del perfil del cliente
