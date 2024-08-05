@@ -1,4 +1,6 @@
-<p align="center"><a href="https://firservice.000webhostapp.com/index.html" target="_blank"><img src="src/logo.png" width="200" alt="FirService Logo"></a></p>
+<p align="center"><a href="https://firservice.000webhostapp.com/index.html" target="_blank"><img src="https://daltonllantas.com/search/logos/20.jpg" width="200" alt="FirService Logo"></a></p>
+<a href="http://74.208.46.156/">Link al proyecto</a>
+
 
 
 ## FirService
